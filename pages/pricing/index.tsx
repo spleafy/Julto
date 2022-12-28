@@ -19,7 +19,7 @@ export default function Home() {
           Ценоразпис на фитнес Жълто
         </p>
         <div className="flex gap-12 flex-col md:flex-row justify-between md:flex-wrap">
-          <div className="flex flex-col items-center basis-[30%] p-16 bg-base rounded-2xl gap-8 drop-shadow-2xl">
+          <div className="flex flex-col items-center basis-[30%] p-16 bg-base rounded-2xl gap-8 drop-shadow-md">
             <h1 className="text-primary font-bold text-4xl">Масажи</h1>
             <div className="flex flex-col items-center gap-2">
               <h2 className="text-3xl text-white font-bold text-center">
@@ -40,7 +40,7 @@ export default function Home() {
               </h3>
             </div>
           </div>
-          <div className="flex flex-col items-center basis-[30%] p-16 bg-base rounded-2xl gap-8 drop-shadow-2xl">
+          <div className="flex flex-col items-center basis-[30%] p-16 bg-base rounded-2xl gap-8 drop-shadow-md">
             <h1 className="text-primary font-bold text-4xl">Фитнес</h1>
             <div className="flex flex-col items-center gap-2">
               <h2 className="text-3xl text-white font-bold text-center">
@@ -67,7 +67,7 @@ export default function Home() {
               <span className="text-2xl text-white opacity-70">85,00 лв.</span>
             </div>
           </div>
-          <div className="flex flex-col items-center basis-[30%] p-16 bg-base rounded-2xl gap-8 drop-shadow-2xl">
+          <div className="flex flex-col items-center basis-[30%] p-16 bg-base rounded-2xl gap-8 drop-shadow-md">
             <h1 className="text-primary font-bold text-4xl">Кикбокс</h1>
             <div className="flex flex-col items-center gap-2">
               <h2 className="text-3xl text-white font-bold text-center">
@@ -88,7 +88,7 @@ export default function Home() {
               </h3>
             </div>
           </div>
-          <div className="flex flex-col gap-10 w-full p-16 bg-base rounded-2xl drop-shadow-2xl">
+          <div className="flex flex-col gap-10 w-full p-16 bg-base rounded-2xl drop-shadow-md">
             <span className="text-bold text-xl md:text-3xl text-white">
               <div className="text-primary inline-block">*</div> Картите на
               посещения са с валидност 3 месеца.

@@ -130,10 +130,10 @@ export default function Home() {
           <div className="flex flex-wrap justify-center gap-8">
             {offers.map((offer: { name: string; photo: string }, index) => (
               <div
-                className="flex flex-col pb-20 bg-base rounded-2xl drop-shadow-2xl basis-3/12"
+                className="flex flex-col pb-12 md:pb-20 bg-base rounded-2xl drop-shadow-md basis-3/12"
                 key={index}
               >
-                <div className="flex relative h-[370px] aspect-square">
+                <div className="flex relative h-[290px] md:h-[370px] aspect-square">
                   <Image
                     src={offer.photo}
                     alt={offer.name}
@@ -141,7 +141,7 @@ export default function Home() {
                     fill
                   />
                 </div>
-                <span className="text-primary text-4xl font-semibold mt-10 text-center px-5">
+                <span className="text-primary text-2xl md:text-4xl font-semibold mt-10 text-center px-5">
                   {offer.name}
                 </span>
               </div>
@@ -200,7 +200,7 @@ export default function Home() {
           <div className="flex flex-wrap justify-center gap-8">
             {coaches.map((coach: { name: string; photo: string }, index) => (
               <div
-                className="flex flex-col pb-20 bg-base rounded-2xl drop-shadow-2xl basis-3/12"
+                className="flex flex-col pb-20 bg-base rounded-2xl drop-shadow-md basis-3/12"
                 key={index}
               >
                 <div className="flex relative h-[370px] aspect-square">
