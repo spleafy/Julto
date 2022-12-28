@@ -12,7 +12,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Section>
-        <h1 className="text-5xl md:text-6xl text-base !font-semibold mb-10 self-center">
+        <h1 className="!text-5xl md:!text-6xl text-base !font-semibold mb-10 self-center">
           Ценоразпис
         </h1>
         <p className="!text-xl text-base mb-10 self-center">

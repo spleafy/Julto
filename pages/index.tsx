@@ -87,7 +87,7 @@ export default function Home() {
       </Head>
       <main className="flex flex-col">
         <Section>
-          <div className="relative w-full h-[750px]">
+          <div className="relative w-full h-[450px] md:h-[750px]">
             {images.map((item, i) => {
               const indexLeft = mod(index - 1, images.length);
               const indexRight = mod(index + 1, images.length);
@@ -190,7 +190,7 @@ export default function Home() {
           ></video>
         </Section>
         <Section>
-          <h1 className="!md:text-6xl text-5xl text-base !font-semibold mb-10 text-center md:text-end">
+          <h1 className="md:!text-6xl !text-5xl text-base !font-semibold mb-10 text-center md:text-end">
             Персонални треньори
           </h1>
           <p className="!text-xl text-base mb-10 self-end md:max-w-[60%] text-center md:text-end">
@@ -239,7 +239,7 @@ export default function Home() {
         <Section className="bg-primary">
           <div className="flex flex-col md:flex-row items-center justify-between gap-10 md:gap-40 mb-10">
             <div className="flex flex-col">
-              <h1 className="!md:text-6xl text-5xl text-base !font-semibold mb-10 text-center">
+              <h1 className="md:!text-6xl !text-5xl text-base !font-semibold mb-10 text-center">
                 Кикбокс
               </h1>
               <p className="!text-xl text-base text-center">
@@ -258,7 +258,7 @@ export default function Home() {
           </div>
           <div className="flex flex-col md:flex-row-reverse items-center justify-between gap-10 md:gap-40 mb-10">
             <div className="flex flex-col">
-              <h1 className="!md:text-6xl text-5xl text-base !font-semibold mb-10 text-center">
+              <h1 className="md:!text-6xl !text-5xl text-base !font-semibold mb-10 text-center">
                 Добавки
               </h1>
               <p className="!text-xl text-base text-center">
@@ -278,7 +278,7 @@ export default function Home() {
           </div>
         </Section>
         <Section className="bg-white items-center">
-          <h1 className="!md:text-6xl text-5xl text-base !font-semibold mb-10 self-start">
+          <h1 className="md:!text-6xl !text-5xl text-base !font-semibold mb-10 self-start">
             Локация
           </h1>
           <p className="!text-xl text-base mb-10 self-start">
