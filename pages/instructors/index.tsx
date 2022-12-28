@@ -55,7 +55,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Section>
-        <h1 className="!text-6xl text-base !font-semibold mb-10 self-center">
+        <h1 className="text-5xl md:text-6xl text-base !font-semibold mb-10 self-center">
           Инструктори
         </h1>
         <p className="!text-xl text-base mb-10 self-center">
@@ -73,18 +73,20 @@ export default function Home() {
           ) => (
             <div
               key={index}
-              className="bg-base rounded-2xl flex w-full gap-16 mb-12"
+              className="bg-base rounded-2xl flex flex-col md:flex-row w-full gap-16 mb-12"
             >
               <Image
                 src={coach.photo}
                 alt={coach.name}
                 width={320}
                 height={320}
-                className="aspect-square object-cover rounded-2xl"
+                className="aspect-square object-cover rounded-2xl w-full md:w-80"
               />
-              <div className="flex flex-col gap-10 py-14">
-                <h1 className="text-white font-bold text-4xl">{coach.name}</h1>
-                <p className="text-white opacity-70 text-2xl max-w-[80%]">
+              <div className="flex flex-col gap-10 pb-14 pt-0 md:py-14 md:justify-start md:items-start justify-center items-center">
+                <h1 className="text-white font-bold text-4xl text-center">
+                  {coach.name}
+                </h1>
+                <p className="text-white opacity-70 text-2xl max-w-[80%] text-center md:text-start">
                   {coach.speciality}
                 </p>
                 <div className="flex items-center gap-5 text-white">

@@ -12,13 +12,13 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Section>
-        <h1 className="!text-6xl text-base !font-semibold mb-10 self-center">
+        <h1 className="text-5xl md:text-6xl text-base !font-semibold mb-10 self-center">
           Ценоразпис
         </h1>
         <p className="!text-xl text-base mb-10 self-center">
           Ценоразпис на фитнес Жълто
         </p>
-        <div className="flex gap-12 justify-between flex-wrap">
+        <div className="flex gap-12 flex-col md:flex-row justify-between md:flex-wrap">
           <div className="flex flex-col items-center basis-[30%] p-16 bg-base rounded-2xl gap-8 drop-shadow-2xl">
             <h1 className="text-primary font-bold text-4xl">Масажи</h1>
             <div className="flex flex-col items-center gap-2">
@@ -89,12 +89,12 @@ export default function Home() {
             </div>
           </div>
           <div className="flex flex-col gap-10 w-full p-16 bg-base rounded-2xl drop-shadow-2xl">
-            <span className="text-bold text-3xl text-white">
+            <span className="text-bold text-xl md:text-3xl text-white">
               <div className="text-primary inline-block">*</div> Картите на
               посещения са с валидност 3 месеца.
             </span>
-            <h1 className="text-primary text-6xl">10% отстъпка </h1>
-            <span className="text-bold text-3xl text-white">
+            <h1 className="text-primary text-4xl md:text-6xl">10% отстъпка </h1>
+            <span className="text-bold text-xl md:text-3xl text-white">
               &quot;Семейство, приятели и съученици&quot; - при закупуване
               едновременно на две (или повече) МЕСЕЧНИ карти ползвате 10%
               отстъпка от стойността им. Всички притежатели на месечни карти

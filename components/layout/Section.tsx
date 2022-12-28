@@ -9,12 +9,12 @@ interface SectionProps {
 const Section: FC<SectionProps> = ({ children, style, className }) => {
   return (
     <section
-      className={`flex justify-center px-36 py-20 ${
+      className={`flex justify-center px-10 md:px-36 py-20 transition-all ${
         className ? className : ""
       }`}
       style={style}
     >
-      <div className="flex flex-col items-center max-w-[1440px] grow">
+      <div className="flex flex-col items-center max-w-[1440px] w-full">
         {children}
       </div>
     </section>

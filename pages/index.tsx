@@ -23,12 +23,12 @@ export default function Home() {
     { id: "6", src: "/static/images/protein_bar.jpg" },
   ];
 
-  useEffect(() => {
-    setTimeout(() => {
-      setIndex((index + 1) % images.length);
-      console.log(index);
-    }, 3000);
-  }, [index, images.length]);
+  // useEffect(() => {
+  //   setTimeout(() => {
+  //     setIndex((index + 1) % images.length);
+  //     console.log(index);
+  //   }, 3000);
+  // }, [index, images.length]);
 
   const offers = [
     { name: "Оборудване", photo: "/static/images/dumbells_3.jpg" },
@@ -86,41 +86,43 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className="flex flex-col">
-        <Section className="relative h-[910px]">
-          {images.map((item, i) => {
-            const indexLeft = mod(index - 1, images.length);
-            const indexRight = mod(index + 1, images.length);
+        <Section>
+          <div className="relative w-full h-[750px]">
+            {images.map((item, i) => {
+              const indexLeft = mod(index - 1, images.length);
+              const indexRight = mod(index + 1, images.length);
 
-            let className = "";
+              let className = "";
 
-            if (i === index) {
-              className =
-                "absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 flex w-[70%] h-[750px] z-10";
-            } else if (i === indexRight) {
-              className =
-                "absolute top-1/2 -right-[98%] -translate-x-1/2 -translate-y-1/2 flex w-[70%] h-[600px] opacity-80";
-            } else if (i === indexLeft) {
-              className =
-                "absolute top-1/2 -left-[98%] translate-x-1/2 -translate-y-1/2 flex w-[70%] h-[600px] opacity-80";
-            } else className = "hidden";
+              if (i === index) {
+                className =
+                  "absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 flex w-11/12 h-full z-10 transition-all";
+              } else if (i === indexRight) {
+                className =
+                  "absolute top-1/2 origin-left right-0 md:-right-[10%] translate-x-full -translate-y-1/2 flex w-3/4 h-3/4 opacity-80 transition-all";
+              } else if (i === indexLeft) {
+                className =
+                  "absolute top-1/2 origin-right left-0 md:-left-[10%] -translate-x-full -translate-y-1/2 flex w-3/4 h-3/4 opacity-80 transition-all";
+              } else className = "hidden absolute transition-all";
 
-            return (
-              <div className={className} key={item.id}>
-                <Image
-                  src={item.src}
-                  alt={item.id}
-                  fill
-                  className="rounded-2xl object-cover"
-                />
-              </div>
-            );
-          })}
+              return (
+                <div className={className} key={item.id}>
+                  <Image
+                    src={item.src}
+                    alt={item.id}
+                    fill
+                    className="rounded-2xl object-cover"
+                  />
+                </div>
+              );
+            })}
+          </div>
         </Section>
         <Section className="items-center  bg-white">
-          <h1 className="text-6xl !font-semibold mb-10 text-center">
+          <h1 className="md:text-6xl text-5xl !font-semibold mb-10 text-center">
             Какво предлагаме
           </h1>
-          <p className="!text-xl text-base mb-10 text-center max-w-[80%]">
+          <p className="!text-xl text-base mb-10 text-center md:max-w-[80%]">
             Добре дошли в нашия фитнес! Предлагаме голямо разнообразие от фитнес
             оборудване,опитни треньори и групови занимания,за да ви помогнем да
             постигнете целите си. Нямаме търпение да те видим във фитнес залата!
@@ -147,7 +149,9 @@ export default function Home() {
           </div>
         </Section>
         <Section className="bg-primary">
-          <h1 className="text-6xl !font-semibold mb-10">Оборудване</h1>
+          <h1 className="md:text-6xl text-5xl !font-semibold mb-10">
+            Оборудване
+          </h1>
           <p className="!text-xl text-base mb-10 md:max-w-[80%] text-center">
             Нашите зали включват кардио машини, оборудване за вдигане на теглото
             и разнообразие от групови фитнес занимания като йога, kickbox и
@@ -170,10 +174,10 @@ export default function Home() {
           </div>
         </Section>
         <Section className="bg-base items-center">
-          <h1 className="text-primary text-6xl !font-semibold mb-10">
+          <h1 className="text-primary md:text-6xl text-5xl !font-semibold mb-10 text-center">
             Виртуална разходка
           </h1>
-          <p className="text-xl text-white mb-10 text-center max-w-[80%]">
+          <p className="text-xl text-white mb-10 text-center md:max-w-[80%]">
             Не сте сигурни дали фитнесът ни е подходящ за вас? Няма проблем. Ние
             предлагаме виртуални разходка на нашите съоръжения, така че можете
             да получите усещане за атмосферата на фитнеса, преди да дойдете
@@ -186,10 +190,10 @@ export default function Home() {
           ></video>
         </Section>
         <Section>
-          <h1 className="!text-6xl text-base !font-semibold mb-10 self-end">
+          <h1 className="!md:text-6xl text-5xl text-base !font-semibold mb-10 text-center md:text-end">
             Персонални треньори
           </h1>
-          <p className="!text-xl text-base mb-10 self-end max-w-[60%] text-end">
+          <p className="!text-xl text-base mb-10 self-end md:max-w-[60%] text-center md:text-end">
             Уморихте ли се да се чувствате изгубени във фитнеса или да не
             виждате резултатите, които искате? Личен треньор може да помогне!
           </p>
@@ -215,8 +219,10 @@ export default function Home() {
           </div>
         </Section>
         <Section className="bg-base items-center">
-          <h1 className="text-primary text-6xl !font-semibold mb-10">Масажи</h1>
-          <p className="text-xl text-white mb-10 text-center max-w-[60%]">
+          <h1 className="text-primary md:text-6xl text-5xl !font-semibold mb-10">
+            Масажи
+          </h1>
+          <p className="text-xl text-white mb-10 text-center md:max-w-[60%]">
             Искаш да се отпуснеш и да се подмладиш след тренировката си? Нашият
             фитнес вече предлага масажни сесии! Нашите лицензирани терапевти ще
             използват различни техники, за да ви помогнат да се отпуснетe.
@@ -231,12 +237,12 @@ export default function Home() {
           <h1 className="text-primary Phone !font-semibold">30 - 50 лв.</h1>
         </Section>
         <Section className="bg-primary">
-          <div className="flex items-center justify-between gap-40 mb-10">
+          <div className="flex flex-col md:flex-row items-center justify-between gap-10 md:gap-40 mb-10">
             <div className="flex flex-col">
-              <h1 className="!text-6xl text-base !font-semibold mb-10">
+              <h1 className="!md:text-6xl text-5xl text-base !font-semibold mb-10 text-center">
                 Кикбокс
               </h1>
-              <p className="!text-xl text-base">
+              <p className="!text-xl text-base text-center">
                 Индивидуални тренировки по кикбокс за начинаещи и напреднали, от
                 6 до 60 години. Освен усвояване на техниката, в тренировките са
                 включени и много упражнения за сила и издръжливост.
@@ -250,12 +256,12 @@ export default function Home() {
               className="aspect-square rounded-2xl object-cover"
             />
           </div>
-          <div className="flex flex-row-reverse items-center justify-between gap-40 mb-10">
+          <div className="flex flex-col md:flex-row-reverse items-center justify-between gap-10 md:gap-40 mb-10">
             <div className="flex flex-col">
-              <h1 className="!text-6xl text-base !font-semibold mb-10">
+              <h1 className="!md:text-6xl text-5xl text-base !font-semibold mb-10 text-center">
                 Добавки
               </h1>
-              <p className="!text-xl text-base">
+              <p className="!text-xl text-base text-center">
                 Освен ароматно кафе и минерална вода, тук ще намерите
                 най-популярните добавки, които могат да ви помогнат да направите
                 вашата тренировка още по-ефективна. И разкошен протеинов шейк
@@ -272,7 +278,7 @@ export default function Home() {
           </div>
         </Section>
         <Section className="bg-white items-center">
-          <h1 className="!text-6xl text-base !font-semibold mb-10 self-start">
+          <h1 className="!md:text-6xl text-5xl text-base !font-semibold mb-10 self-start">
             Локация
           </h1>
           <p className="!text-xl text-base mb-10 self-start">

@@ -12,13 +12,13 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Section className="items-center">
-        <h1 className="!text-6xl text-base !font-semibold mb-10 self-center">
+        <h1 className="text-5xl md:text-6xl text-base !font-semibold mb-10 self-center">
           График
         </h1>
         <p className="!text-xl text-base mb-10 self-center">
           График на фитнес Жълто
         </p>
-        <div className="flex flex-col lg:flex-row gap-16 w-fit bg-base p-10 rounded-2xl">
+        <div className="flex flex-col lg:flex-row gap-16 w-full lg:w-fit bg-base p-10 rounded-2xl">
           <div className="flex flex-col gap-10 items-center">
             <span className="font-bold text-xl text-white">Понеделник</span>
             <span className="font-bold text-xl text-white opacity-70">
