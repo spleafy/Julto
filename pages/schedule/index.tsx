@@ -24,10 +24,7 @@ export default function Home() {
               Понеделник
             </span>
             <span className="font-bold text-2xl sm:text-xl text-white opacity-70">
-              6:00
-            </span>
-            <span className="font-bold text-2xl sm:text-xl text-white opacity-70">
-              22:00
+              6:00 - 22:00
             </span>
           </div>
           <div className="flex flex-col gap-10 items-center">
@@ -35,10 +32,7 @@ export default function Home() {
               Вторник
             </span>
             <span className="font-bold text-2xl sm:text-xl text-white opacity-70">
-              6:00
-            </span>
-            <span className="font-bold text-2xl sm:text-xl text-white opacity-70">
-              22:00
+              6:00 - 22:00
             </span>
           </div>
           <div className="flex flex-col gap-10 items-center">
@@ -46,10 +40,7 @@ export default function Home() {
               Сряда
             </span>
             <span className="font-bold text-2xl sm:text-xl text-white opacity-70">
-              6:00
-            </span>
-            <span className="font-bold text-2xl sm:text-xl text-white opacity-70">
-              22:00
+              6:00 - 22:00
             </span>
           </div>
           <div className="flex flex-col gap-10 items-center">
@@ -57,10 +48,7 @@ export default function Home() {
               Четвъртък
             </span>
             <span className="font-bold text-2xl sm:text-xl text-white opacity-70">
-              6:00
-            </span>
-            <span className="font-bold text-2xl sm:text-xl text-white opacity-70">
-              22:00
+              6:00 - 22:00
             </span>
           </div>
           <div className="flex flex-col gap-10 items-center">
@@ -68,10 +56,7 @@ export default function Home() {
               Петък
             </span>
             <span className="font-bold text-2xl sm:text-xl text-white opacity-70">
-              6:00
-            </span>
-            <span className="font-bold text-2xl sm:text-xl text-white opacity-70">
-              22:00
+              6:00 - 22:00
             </span>
           </div>
           <div className="flex flex-col gap-10 items-center">
@@ -79,10 +64,7 @@ export default function Home() {
               Събота
             </span>
             <span className="font-bold text-2xl sm:text-xl text-white opacity-70">
-              9:00
-            </span>
-            <span className="font-bold text-2xl sm:text-xl text-white opacity-70">
-              20:00
+              9:00 - 20:00
             </span>
           </div>
           <div className="flex flex-col gap-10 items-center">
@@ -90,10 +72,7 @@ export default function Home() {
               Неделя
             </span>
             <span className="font-bold text-2xl sm:text-xl text-white opacity-70">
-              9:00
-            </span>
-            <span className="font-bold text-2xl sm:text-xl text-white opacity-70">
-              20:00
+              9:00 - 20:00
             </span>
           </div>
         </div>

@@ -157,7 +157,7 @@ export default function Home() {
             и разнообразие от групови фитнес занимания като йога, kickbox и
             Zumba.
           </p>
-          <div className="flex flex-wrap w-full gap-5">
+          <div className="flex flex-wrap w-full gap-10">
             {equipment.map((src: string, index) => (
               <div
                 className="flex relative grow w-[90%] basis-[100%] md:basis-[20%] aspect-square"
@@ -234,7 +234,9 @@ export default function Home() {
             height={460}
             className="aspect-square rounded-2xl object-cover mb-10"
           />
-          <h1 className="text-primary Phone !font-semibold">30 - 50 лв.</h1>
+          <h1 className="text-primary Phone !font-semibold">
+            30,00 лв. - 50,00 лв.
+          </h1>
         </Section>
         <Section className="bg-primary">
           <div className="flex flex-col md:flex-row items-center justify-between gap-10 md:gap-40 mb-10">
