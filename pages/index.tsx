@@ -23,12 +23,12 @@ export default function Home() {
     { id: "6", src: "/static/images/protein_bar.jpg" },
   ];
 
-  // useEffect(() => {
-  //   setTimeout(() => {
-  //     setIndex((index + 1) % images.length);
-  //     console.log(index);
-  //   }, 3000);
-  // }, [index, images.length]);
+  useEffect(() => {
+    setTimeout(() => {
+      setIndex((index + 1) % images.length);
+      console.log(index);
+    }, 3000);
+  }, [index, images.length]);
 
   const offers = [
     { name: "Оборудване", photo: "/static/images/dumbells_3.jpg" },
