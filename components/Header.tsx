@@ -10,7 +10,7 @@ const Header = () => {
   const [expanded, setExpanded] = useState(false);
 
   return (
-    <header className="flex items-center justify-between px-10 lg:px-20 py-14">
+    <header className="flex items-center justify-between px-10 lg:px-20 py-14 transition-all">
       <Link href="/">
         <Image
           src="/static/images/logo.svg"

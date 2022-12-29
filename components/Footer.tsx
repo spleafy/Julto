@@ -4,7 +4,7 @@ import { Phone, Envelope, FacebookLogo, InstagramLogo } from "phosphor-react";
 
 const Footer = () => {
   return (
-    <footer className="flex justify-center px-10 md:px-36 py-14 md:py-20 pb-24 bg-base">
+    <footer className="flex justify-center px-10 md:px-36 py-14 md:py-20 pb-24 bg-base transition-all">
       <div className="flex w-full flex-col md:flex-row justify-between gap-20 max-w-[1440px]">
         <div className="flex flex-col gap-10">
           <Image

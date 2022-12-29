@@ -31,7 +31,7 @@ export default function Home() {
                 50 минути
               </span>
               <h3 className="text-xl md:text-2xl text-white font-bold text-center">
-                50 лв.
+                50,00 лв.
               </h3>
             </div>
             <div className="flex flex-col items-center gap-2">
@@ -95,7 +95,7 @@ export default function Home() {
                 60 минути
               </span>
               <h3 className="text-xl md:text-2xl text-white font-bold text-center">
-                50 лв.
+                50,00 лв.
               </h3>
             </div>
             <div className="flex flex-col items-center gap-2">
@@ -106,7 +106,7 @@ export default function Home() {
                 90 минути
               </span>
               <h3 className="text-xl md:text-2xl text-white font-bold text-center">
-                30 лв.
+                30,00 лв.
               </h3>
             </div>
           </div>

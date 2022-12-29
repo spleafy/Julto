@@ -1,4 +1,5 @@
 import Head from "next/head";
+import Link from "next/link";
 import Image from "next/image";
 import { useState, useEffect } from "react";
 // Components
@@ -31,15 +32,32 @@ export default function Home() {
   }, [index, images.length]);
 
   const offers = [
-    { name: "Оборудване", photo: "/static/images/dumbells_3.jpg" },
-    { name: "Виртуална Разходка", photo: "/static/images/entrance.png" },
+    {
+      name: "Оборудване",
+      photo: "/static/images/dumbells_3.jpg",
+      link: "#equipment",
+    },
+    {
+      name: "Виртуална Разходка",
+      photo: "/static/images/entrance.png",
+      link: "#virtual_walk",
+    },
     {
       name: "Персонални Треньори",
       photo: "/static/images/nikolai_kalchev.jpg",
+      link: "#instructors",
     },
-    { name: "Масажи", photo: "/static/images/massage_2.jpg" },
-    { name: "Кикбокс", photo: "/static/images/kickbox.jpg" },
-    { name: "Протеин", photo: "/static/images/protein_bar.jpg" },
+    {
+      name: "Масажи",
+      photo: "/static/images/massage_2.jpg",
+      link: "#massages",
+    },
+    { name: "Кикбокс", photo: "/static/images/kickbox.jpg", link: "#features" },
+    {
+      name: "Протеин",
+      photo: "/static/images/protein_bar.jpg",
+      link: "#features",
+    },
   ];
 
   const equipment = [
@@ -86,7 +104,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className="flex flex-col">
-        <Section>
+        <Section id="landing">
           <div className="relative w-full h-[450px] md:h-[750px]">
             {images.map((item, i) => {
               const indexLeft = mod(index - 1, images.length);
@@ -118,7 +136,7 @@ export default function Home() {
             })}
           </div>
         </Section>
-        <Section className="items-center  bg-white">
+        <Section className="items-center  bg-white" id="offer">
           <h1 className="md:text-6xl text-5xl !font-semibold mb-10 text-center">
             Какво предлагаме
           </h1>
@@ -128,27 +146,30 @@ export default function Home() {
             постигнете целите си. Нямаме търпение да те видим във фитнес залата!
           </p>
           <div className="flex flex-wrap justify-center gap-8">
-            {offers.map((offer: { name: string; photo: string }, index) => (
-              <div
-                className="flex flex-col pb-12 md:pb-20 bg-base rounded-2xl drop-shadow-md basis-3/12"
-                key={index}
-              >
-                <div className="flex relative h-[290px] md:h-[370px] aspect-square">
-                  <Image
-                    src={offer.photo}
-                    alt={offer.name}
-                    className="object-cover rounded-2xl"
-                    fill
-                  />
-                </div>
-                <span className="text-primary text-2xl md:text-4xl font-semibold mt-10 text-center px-5">
-                  {offer.name}
-                </span>
-              </div>
-            ))}
+            {offers.map(
+              (offer: { name: string; photo: string; link: string }, index) => (
+                <Link
+                  className="flex flex-col pb-12 md:pb-20 bg-base rounded-2xl drop-shadow-md basis-3/12"
+                  key={index}
+                  href={offer.link}
+                >
+                  <div className="flex relative h-[290px] md:h-[370px] aspect-square">
+                    <Image
+                      src={offer.photo}
+                      alt={offer.name}
+                      className="object-cover rounded-2xl"
+                      fill
+                    />
+                  </div>
+                  <span className="text-primary text-2xl md:text-4xl font-semibold mt-10 text-center px-5">
+                    {offer.name}
+                  </span>
+                </Link>
+              )
+            )}
           </div>
         </Section>
-        <Section className="bg-primary">
+        <Section className="bg-primary" id="equipment">
           <h1 className="md:text-6xl text-5xl !font-semibold mb-10">
             Оборудване
           </h1>
@@ -173,7 +194,7 @@ export default function Home() {
             ))}
           </div>
         </Section>
-        <Section className="bg-base items-center">
+        <Section className="bg-base items-center" id="virtual_walk">
           <h1 className="text-primary md:text-6xl text-5xl !font-semibold mb-10 text-center">
             Виртуална разходка
           </h1>
@@ -189,8 +210,8 @@ export default function Home() {
             controls
           ></video>
         </Section>
-        <Section>
-          <h1 className="md:!text-6xl !text-5xl text-base !font-semibold mb-10 text-center md:text-end">
+        <Section id="instructors">
+          <h1 className="md:!text-6xl !text-5xl text-base !font-semibold mb-10 text-center md:!text-end md:self-end">
             Персонални треньори
           </h1>
           <p className="!text-xl text-base mb-10 self-end md:max-w-[60%] text-center md:text-end">
@@ -199,9 +220,10 @@ export default function Home() {
           </p>
           <div className="flex flex-wrap justify-center gap-8">
             {coaches.map((coach: { name: string; photo: string }, index) => (
-              <div
+              <Link
                 className="flex flex-col pb-12 md:pb-20 bg-base rounded-2xl drop-shadow-md basis-3/12"
                 key={index}
+                href="/instructors"
               >
                 <div className="flex relative h-[290px] md:h-[370px] aspect-square">
                   <Image
@@ -214,11 +236,11 @@ export default function Home() {
                 <span className="text-white text-2xl md:text-4xl font-semibold mt-10 text-center self-center px-5 max-w-[370px]">
                   {coach.name}
                 </span>
-              </div>
+              </Link>
             ))}
           </div>
         </Section>
-        <Section className="bg-base items-center">
+        <Section className="bg-base items-center" id="massages">
           <h1 className="text-primary md:text-6xl text-5xl !font-semibold mb-10">
             Масажи
           </h1>
@@ -238,13 +260,13 @@ export default function Home() {
             30,00 лв. - 50,00 лв.
           </h1>
         </Section>
-        <Section className="bg-primary">
+        <Section className="bg-primary" id="features">
           <div className="flex flex-col md:flex-row items-center justify-between gap-10 md:gap-40 mb-10">
             <div className="flex flex-col">
-              <h1 className="md:!text-6xl !text-5xl text-base !font-semibold mb-10 text-center">
+              <h1 className="md:!text-6xl !text-5xl text-base !font-semibold mb-10 text-center md:text-start">
                 Кикбокс
               </h1>
-              <p className="!text-xl text-base text-center">
+              <p className="!text-xl text-base text-center md:text-start">
                 Индивидуални тренировки по кикбокс за начинаещи и напреднали, от
                 6 до 60 години. Освен усвояване на техниката, в тренировките са
                 включени и много упражнения за сила и издръжливост.
@@ -260,10 +282,10 @@ export default function Home() {
           </div>
           <div className="flex flex-col md:flex-row-reverse items-center justify-between gap-10 md:gap-40 mb-10">
             <div className="flex flex-col">
-              <h1 className="md:!text-6xl !text-5xl text-base !font-semibold mb-10 text-center">
+              <h1 className="md:!text-6xl !text-5xl text-base !font-semibold mb-10 text-center md:text-end">
                 Добавки
               </h1>
-              <p className="!text-xl text-base text-center">
+              <p className="!text-xl text-base text-center md:text-end">
                 Освен ароматно кафе и минерална вода, тук ще намерите
                 най-популярните добавки, които могат да ви помогнат да направите
                 вашата тренировка още по-ефективна. И разкошен протеинов шейк
@@ -279,7 +301,7 @@ export default function Home() {
             />
           </div>
         </Section>
-        <Section className="bg-white items-center">
+        <Section className="bg-white items-center" id="location">
           <h1 className="md:!text-6xl !text-5xl text-base !font-semibold mb-10 self-start">
             Локация
           </h1>

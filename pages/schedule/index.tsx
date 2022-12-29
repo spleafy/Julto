@@ -20,58 +20,58 @@ export default function Home() {
         </p>
         <div className="flex flex-col lg:flex-row gap-16 w-full lg:w-fit bg-base p-10 rounded-2xl">
           <div className="flex flex-col gap-10 items-center">
-            <span className="font-bold text-2xl sm:text-xl text-white">
+            <span className="font-bold text-2xl sm:text-xl text-white transition-all">
               Понеделник
             </span>
-            <span className="font-bold text-2xl sm:text-xl text-white opacity-70">
+            <span className="font-bold text-2xl sm:text-xl text-white transition-all opacity-70">
               6:00 - 22:00
             </span>
           </div>
           <div className="flex flex-col gap-10 items-center">
-            <span className="font-bold text-2xl sm:text-xl text-white">
+            <span className="font-bold text-2xl sm:text-xl text-white transition-all">
               Вторник
             </span>
-            <span className="font-bold text-2xl sm:text-xl text-white opacity-70">
+            <span className="font-bold text-2xl sm:text-xl text-white transition-all opacity-70">
               6:00 - 22:00
             </span>
           </div>
           <div className="flex flex-col gap-10 items-center">
-            <span className="font-bold text-2xl sm:text-xl text-white">
+            <span className="font-bold text-2xl sm:text-xl text-white transition-all">
               Сряда
             </span>
-            <span className="font-bold text-2xl sm:text-xl text-white opacity-70">
+            <span className="font-bold text-2xl sm:text-xl text-white transition-all opacity-70">
               6:00 - 22:00
             </span>
           </div>
           <div className="flex flex-col gap-10 items-center">
-            <span className="font-bold text-2xl sm:text-xl text-white">
+            <span className="font-bold text-2xl sm:text-xl text-white transition-all">
               Четвъртък
             </span>
-            <span className="font-bold text-2xl sm:text-xl text-white opacity-70">
+            <span className="font-bold text-2xl sm:text-xl text-white transition-all opacity-70">
               6:00 - 22:00
             </span>
           </div>
           <div className="flex flex-col gap-10 items-center">
-            <span className="font-bold text-2xl sm:text-xl text-white">
+            <span className="font-bold text-2xl sm:text-xl text-white transition-all">
               Петък
             </span>
-            <span className="font-bold text-2xl sm:text-xl text-white opacity-70">
+            <span className="font-bold text-2xl sm:text-xl text-white transition-all opacity-70">
               6:00 - 22:00
             </span>
           </div>
           <div className="flex flex-col gap-10 items-center">
-            <span className="font-bold text-2xl sm:text-xl text-white">
+            <span className="font-bold text-2xl sm:text-xl text-white transition-all">
               Събота
             </span>
-            <span className="font-bold text-2xl sm:text-xl text-white opacity-70">
+            <span className="font-bold text-2xl sm:text-xl text-white transition-all opacity-70">
               9:00 - 20:00
             </span>
           </div>
           <div className="flex flex-col gap-10 items-center">
-            <span className="font-bold text-2xl sm:text-xl text-white">
+            <span className="font-bold text-2xl sm:text-xl text-white transition-all">
               Неделя
             </span>
-            <span className="font-bold text-2xl sm:text-xl text-white opacity-70">
+            <span className="font-bold text-2xl sm:text-xl text-white transition-all opacity-70">
               9:00 - 20:00
             </span>
           </div>
