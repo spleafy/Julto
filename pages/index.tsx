@@ -2,6 +2,7 @@ import Head from "next/head";
 import Link from "next/link";
 import Image from "next/image";
 import { useState, useEffect } from "react";
+import { motion } from "framer-motion";
 // Components
 import Section from "../components/layout/Section";
 
@@ -137,7 +138,7 @@ export default function Home() {
           </div>
         </Section>
         <Section className="items-center  bg-white" id="offer">
-          <h1 className="md:text-6xl text-5xl !font-semibold mb-10 text-center">
+          <h1 className="md:text-6xl text-5xl !font-semibold mb-10 text-center transition-all">
             Какво предлагаме
           </h1>
           <p className="!text-xl text-base mb-10 text-center md:max-w-[80%]">
@@ -149,7 +150,7 @@ export default function Home() {
             {offers.map(
               (offer: { name: string; photo: string; link: string }, index) => (
                 <Link
-                  className="flex flex-col pb-12 md:pb-20 bg-base rounded-2xl drop-shadow-md basis-3/12"
+                  className="flex flex-col pb-12 md:pb-20 bg-base rounded-2xl drop-shadow-md basis-3/12 hover:scale-105 transition-all"
                   key={index}
                   href={offer.link}
                 >
@@ -221,7 +222,7 @@ export default function Home() {
           <div className="flex flex-wrap justify-center gap-8">
             {coaches.map((coach: { name: string; photo: string }, index) => (
               <Link
-                className="flex flex-col pb-12 md:pb-20 bg-base rounded-2xl drop-shadow-md basis-3/12"
+                className="flex flex-col pb-12 md:pb-20 bg-base rounded-2xl drop-shadow-md basis-3/12 hover:scale-105 transition-all"
                 key={index}
                 href="/instructors"
               >

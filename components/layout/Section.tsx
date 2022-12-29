@@ -2,7 +2,7 @@ import { FC, ReactNode, useRef } from "react";
 import { motion, useInView } from "framer-motion";
 
 interface SectionProps {
-  children: ReactNode;
+  children: ReactNode | any;
   style?: any;
   className?: string;
   id?: string;
@@ -28,7 +28,7 @@ const Section: FC<SectionProps> = ({ children, id, style, className }) => {
         }}
         ref={ref}
       >
-        {children}
+        {typeof children === "function" ? children(isInView) : children}
       </motion.div>
     </section>
   );
