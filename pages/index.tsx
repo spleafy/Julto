@@ -28,8 +28,7 @@ export default function Home() {
   useEffect(() => {
     setTimeout(() => {
       setIndex((index + 1) % images.length);
-      console.log(index);
-    }, 3000);
+    }, 2000);
   }, [index, images.length]);
 
   const offers = [
@@ -115,14 +114,14 @@ export default function Home() {
 
               if (i === index) {
                 className =
-                  "absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 flex w-11/12 h-full z-10 transition-all";
+                  "absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 flex w-11/12 h-full z-10 transition-all duration-700";
               } else if (i === indexRight) {
                 className =
-                  "absolute top-1/2 origin-left right-0 md:-right-[10%] translate-x-full -translate-y-1/2 flex w-3/4 h-3/4 opacity-80 transition-all";
+                  "absolute top-1/2 origin-left right-0 md:-right-[10%] translate-x-full -translate-y-1/2 flex w-3/4 h-3/4 opacity-80 transition-all duration-700";
               } else if (i === indexLeft) {
                 className =
-                  "absolute top-1/2 origin-right left-0 md:-left-[10%] -translate-x-full -translate-y-1/2 flex w-3/4 h-3/4 opacity-80 transition-all";
-              } else className = "hidden absolute transition-all";
+                  "absolute top-1/2 origin-right left-0 md:-left-[10%] -translate-x-full -translate-y-1/2 flex w-3/4 h-3/4 opacity-80 transition-all duration-700";
+              } else className = "hidden absolute transition-all duration-700";
 
               return (
                 <div className={className} key={item.id}>
