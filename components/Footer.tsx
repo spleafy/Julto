@@ -42,13 +42,19 @@ const Footer = () => {
             href="pricing"
             className="text-lg text-white hover:text-primary transition-all"
           >
-            Ценоразпис
+            Цени
           </Link>
           <Link
             href="schedule"
             className="text-lg text-white hover:text-primary transition-all"
           >
-            График
+            Работно време
+          </Link>
+          <Link
+            href="location"
+            className="text-lg text-white hover:text-primary transition-all"
+          >
+            Локация
           </Link>
         </div>
         <div className="flex flex-col gap-2">

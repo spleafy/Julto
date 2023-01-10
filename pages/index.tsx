@@ -19,16 +19,14 @@ export default function Home() {
   const images = [
     { id: "1", src: "/static/images/entrance.png" },
     { id: "2", src: "/static/images/dumbells_3.jpg" },
-    { id: "3", src: "/static/images/equipment_3.jpg" },
     { id: "4", src: "/static/images/equipment_2.jpg" },
-    { id: "5", src: "/static/images/people.jpg" },
     { id: "6", src: "/static/images/protein_bar.jpg" },
   ];
 
   useEffect(() => {
     setTimeout(() => {
       setIndex((index + 1) % images.length);
-    }, 2000);
+    }, 3000);
   }, [index, images.length]);
 
   const offers = [
@@ -72,19 +70,20 @@ export default function Home() {
   ];
 
   const coaches = [
-    { name: "Жулиян Желев", photo: "/static/images/juliqn_jelev.jpg" },
-    {
-      name: "Мариана Пъргавелова",
-      photo: "/static/images/mariana_pargavelova.jpg",
-    },
-    {
-      name: "Надя Матай",
-      photo: "/static/images/nadq_matai.jpg",
-    },
     {
       name: "Николай Калчев",
       photo: "/static/images/nikolai_kalchev.jpg",
     },
+    {
+      name: "Мариана Пъргавелова",
+      photo: "/static/images/mariana_pargavelova.jpg",
+    },
+    { name: "Жулиян Желев", photo: "/static/images/juliqn_jelev.jpg" },
+    {
+      name: "Надя Матай",
+      photo: "/static/images/nadq_matai.jpg",
+    },
+
     {
       name: "Олег Давиденко",
       photo: "/static/images/oleg_davidenko.jpg",
@@ -105,7 +104,7 @@ export default function Home() {
       </Head>
       <main className="flex flex-col">
         <Section id="landing">
-          <div className="relative w-full h-[450px] md:h-[750px]">
+          <div className="relative w-full h-[450px] md:h-[700px]">
             {images.map((item, i) => {
               const indexLeft = mod(index - 1, images.length);
               const indexRight = mod(index + 1, images.length);
@@ -137,14 +136,6 @@ export default function Home() {
           </div>
         </Section>
         <Section className="items-center  bg-white" id="offer">
-          <h1 className="md:text-6xl text-5xl !font-semibold mb-10 text-center transition-all">
-            Какво предлагаме
-          </h1>
-          <p className="!text-xl text-base mb-10 text-center md:max-w-[80%]">
-            Добре дошли в нашия фитнес! Предлагаме голямо разнообразие от фитнес
-            оборудване,опитни треньори и групови занимания,за да ви помогнем да
-            постигнете целите си. Нямаме търпение да те видим във фитнес залата!
-          </p>
           <div className="flex flex-wrap justify-center gap-8">
             {offers.map(
               (offer: { name: string; photo: string; link: string }, index) => (
@@ -153,7 +144,7 @@ export default function Home() {
                   key={index}
                   href={offer.link}
                 >
-                  <div className="flex relative h-[290px] md:h-[370px] aspect-square">
+                  <div className="flex relative h-[290px] md:h-[350px] aspect-square">
                     <Image
                       src={offer.photo}
                       alt={offer.name}
@@ -174,9 +165,17 @@ export default function Home() {
             Оборудване
           </h1>
           <p className="!text-xl text-base mb-10 md:max-w-[80%] text-center">
-            Нашите зали включват кардио машини, оборудване за вдигане на теглото
-            и разнообразие от групови фитнес занимания като йога, kickbox и
-            Zumba.
+            Кардио уреди – 12 броя (пътеки, велоергометри, кростренажори, гребен
+            тренажор) Свободни тежести – уважаваме упражненията със свободни
+            тежести и затова подходихме сериозно към тази част: – специални
+            лостове до 600кг на лежанките, клека и подиума за тяга - достатъчно
+            дискове за всички уреди едновременно - дъмбели от 2,5 до 50кг – два
+            комплекта - щанги с фиксирана тежест от 10 до 50кг – два комплекта
+            Машини – подбрахме внимателно едни от най-сполучливите машини за
+            гръб, гърди, рамо, бицепс, предно бедро, задно бедро и др. Свободно
+            пространство – най-ценната част в една зала – тук можеш на
+            спокойствие да загряваш, да разтягаш, да изпълняваш упражнения със
+            свободни тежести, да играеш кик бокс.
           </p>
           <div className="flex flex-wrap w-full gap-10">
             {equipment.map((src: string, index) => (
@@ -198,26 +197,17 @@ export default function Home() {
           <h1 className="text-primary md:text-6xl text-5xl !font-semibold mb-10 text-center">
             Виртуална разходка
           </h1>
-          <p className="text-xl text-white mb-10 text-center md:max-w-[80%]">
-            Не сте сигурни дали фитнесът ни е подходящ за вас? Няма проблем. Ние
-            предлагаме виртуални разходка на нашите съоръжения, така че можете
-            да получите усещане за атмосферата на фитнеса, преди да дойдете
-            лично.
-          </p>
           <video
             src="/static/videos/virtual_walk.mp4"
-            className="aspect-square h-[450px]"
+            className="aspect-square h-[550px]"
             controls
           ></video>
         </Section>
         <Section id="instructors">
-          <h1 className="md:!text-6xl !text-5xl text-base !font-semibold mb-10 text-center md:!text-end md:self-end">
+          <h1 className="md:!text-6xl !text-5xl text-base !font-semibold mb-10 text-center md:!text-end">
             Персонални треньори
           </h1>
-          <p className="!text-xl text-base mb-10 self-end md:max-w-[60%] text-center md:text-end">
-            Уморихте ли се да се чувствате изгубени във фитнеса или да не
-            виждате резултатите, които искате? Личен треньор може да помогне!
-          </p>
+
           <div className="flex flex-wrap justify-center gap-8">
             {coaches.map((coach: { name: string; photo: string }, index) => (
               <Link
@@ -245,9 +235,8 @@ export default function Home() {
             Масажи
           </h1>
           <p className="text-xl text-white mb-10 text-center md:max-w-[60%]">
-            Искаш да се отпуснеш и да се подмладиш след тренировката си? Нашият
-            фитнес вече предлага масажни сесии! Нашите лицензирани терапевти ще
-            използват различни техники, за да ви помогнат да се отпуснетe.
+            Мариана Пъргавелова, масажист-терапевт. Видове: Класически, Спортен,
+            Лечебен, Антицелулитен, Релаксиращ  
           </p>
           <Image
             src="/static/images/massage_2.jpg"

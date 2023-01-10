@@ -10,7 +10,7 @@ const Header = () => {
   const [expanded, setExpanded] = useState(false);
 
   return (
-    <header className="flex items-center justify-between px-10 lg:px-20 py-14 transition-all">
+    <header className="flex items-center justify-between px-20 lg:px-20 py-14 transition-all">
       <Link href="/">
         <Image
           src="/static/images/logo.svg"
@@ -19,27 +19,33 @@ const Header = () => {
           height={40}
         />
       </Link>
-      <div className="hidden md:flex items-center gap-4 md:gap-16">
+      <div className="hidden md:flex items-center gap-4 md:gap-16 ">
         <Link href="/" className={router.pathname == "/" ? "font-bold" : ""}>
           Начало
+        </Link>
+        <Link
+          href="/pricing"
+          className={router.pathname == "/pricing" ? "font-bold" : ""}
+        >
+          Цени
+        </Link>
+        <Link
+          href="/schedule"
+          className={router.pathname == "/schedule" ? "font-bold" : ""}
+        >
+          Работно време
+        </Link>
+        <Link
+          href="/location"
+          className={router.pathname == "/location" ? "font-bold" : ""}
+        >
+          Локация
         </Link>
         <Link
           href="/instructors"
           className={router.pathname == "/instructors" ? "font-bold" : ""}
         >
           Инструктори
-        </Link>
-        <Link
-          href="/pricing"
-          className={router.pathname == "/pricing" ? "font-bold" : ""}
-        >
-          Ценоразпис
-        </Link>
-        <Link
-          href="/schedule"
-          className={router.pathname == "/schedule" ? "font-bold" : ""}
-        >
-          График
         </Link>
       </div>
       <div className="hidden md:flex items-center gap-14">
@@ -78,25 +84,32 @@ const Header = () => {
             Начало
           </Link>
           <Link
-            href="/instructors"
-            className={router.pathname == "/instructors" ? "font-bold" : ""}
-            onClick={() => setExpanded(false)}
-          >
-            Инструктори
-          </Link>
-          <Link
             href="/pricing"
             className={router.pathname == "/pricing" ? "font-bold" : ""}
             onClick={() => setExpanded(false)}
           >
-            Ценоразпис
+            Цени
           </Link>
           <Link
             href="/schedule"
             className={router.pathname == "/schedule" ? "font-bold" : ""}
             onClick={() => setExpanded(false)}
           >
-            График
+            Работно време
+          </Link>
+          <Link
+            href="/location"
+            className={router.pathname == "/location" ? "font-bold" : ""}
+            onClick={() => setExpanded(false)}
+          >
+            Локация
+          </Link>
+          <Link
+            href="/instructors"
+            className={router.pathname == "/instructors" ? "font-bold" : ""}
+            onClick={() => setExpanded(false)}
+          >
+            Инструктори
           </Link>
           <div className="flex items-center gap-14">
             <Link href="tel:0887 200 104">

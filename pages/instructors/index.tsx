@@ -5,45 +5,53 @@ import { Phone } from "phosphor-react";
 // Components
 import Section from "../../components/layout/Section";
 
-export default function Home() {
+export default function Instructors() {
   const coaches = [
-    {
-      name: "Жулиян Желев",
-      photo: "/static/images/juliqn_jelev.jpg",
-      speciality: "Кикбокс",
-      phone: "0888 962 105",
-    },
-    {
-      name: "Мариана Пъргавелова",
-      photo: "/static/images/mariana_pargavelova.jpg",
-      speciality: "Фитнес, хранителни и тренировъчни програми",
-      phone: "0893 063 892",
-    },
-    {
-      name: "Надя Матай",
-      photo: "/static/images/nadq_matai.jpg",
-      speciality: "Фитнес",
-      phone: "0896 740 248",
-    },
     {
       name: "Николай Калчев",
       photo: "/static/images/nikolai_kalchev.jpg",
       speciality:
         "Фитнес, бодибилдинг, кондиционни тренировки, консултации хранене",
       phone: "0887 200 104",
+      href: "/pages/instructors/nikolaykalchev.tsx",
     },
+    {
+      name: "Мариана Пъргавелова",
+      photo: "/static/images/mariana_pargavelova.jpg",
+      speciality: "Фитнес, хранителни и тренировъчни програми",
+      phone: "0893 063 892",
+      href: "/pages/instructors/nikolaykalchev.tsx",
+    },
+    {
+      name: "Надя Матай",
+      photo: "/static/images/nadq_matai.jpg",
+      speciality: "Фитнес",
+      phone: "0896 740 248",
+      href: "/pages/instructors/nikolaykalchev.tsx",
+    },
+
     {
       name: "Олег Давиденко",
       photo: "/static/images/oleg_davidenko.jpg",
       speciality:
         "Фитнес, маратон, плуване, хранителни и тренировъчни програми",
       phone: "0897 843 606",
+      href: "/pages/instructors/nikolaykalchev.tsx",
     },
     {
       name: "Росен Михов",
       photo: "/static/images/rosen_mihov.jpg",
       speciality: "Фитнес, бодибилдинг, хранителни и тренировъчни програми",
       phone: "0883 353 631",
+      href: "/pages/instructors/nikolaykalchev.tsx",
+    },
+
+    {
+      name: "Жулиян Желев",
+      photo: "/static/images/juliqn_jelev.jpg",
+      speciality: "Кикбокс",
+      phone: "0888 962 105",
+      href: "/pages/instructors/nikolaykalchev.tsx",
     },
   ];
 
@@ -59,9 +67,7 @@ export default function Home() {
         <h1 className="!text-5xl md:!text-6xl text-base !font-semibold mb-10 self-center">
           Инструктори
         </h1>
-        <p className="!text-xl text-base mb-10 self-center">
-          Инструктори на фитнес Жълто
-        </p>
+        <p className="!text-xl text-base mb-10 self-center"></p>
         {coaches.map(
           (
             coach: {
@@ -69,12 +75,14 @@ export default function Home() {
               photo: string;
               speciality: string;
               phone: string;
+              href: string;
             },
             index
           ) => (
-            <div
+            <Link
               key={index}
-              className="bg-base rounded-2xl flex flex-col md:flex-row w-full gap-8 md:gap-16 mb-12"
+              className="bg-base rounded-2xl flex flex-col md:flex-row w-full gap-8 md:gap-16 mb-12 "
+              href={coach.href}
             >
               <Image
                 src={coach.photo}
@@ -100,7 +108,7 @@ export default function Home() {
                   </span>
                 </Link>
               </div>
-            </div>
+            </Link>
           )
         )}
       </Section>

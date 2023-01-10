@@ -2,7 +2,7 @@ import Head from "next/head";
 // Components
 import Section from "../../components/layout/Section";
 
-export default function Home() {
+export default function Schedule() {
   return (
     <>
       <Head>
@@ -13,11 +13,9 @@ export default function Home() {
       </Head>
       <Section className="items-center">
         <h1 className="!text-5xl md:!text-6xl text-base !font-semibold mb-10 self-center">
-          График
+          Работно време
         </h1>
-        <p className="!text-xl text-base mb-10 self-center">
-          График на фитнес Жълто
-        </p>
+
         <div className="flex flex-col lg:flex-row gap-16 w-full lg:w-fit bg-base p-10 rounded-2xl">
           <div className="flex flex-col gap-10 items-center">
             <span className="font-bold text-2xl sm:text-xl text-white transition-all">
