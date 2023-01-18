@@ -3,7 +3,7 @@ import Section from "../../components/layout/Section";
 
 const Location = () => {
   return (
-    <Section className="bg-primary items-center" id="location">
+    <Section className="bg-white items-center" id="location">
       <h1 className="md:!text-6xl !text-5xl text-base !font-semibold mb-10">
         Локация
       </h1>

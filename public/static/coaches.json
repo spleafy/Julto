@@ -1,0 +1,44 @@
+[
+  {
+    "name": "Николай Калчев",
+    "photo": "/static/images/nikolai_kalchev.jpg",
+    "speciality": "Фитнес, бодибилдинг, кондиционни тренировки, консултации хранене",
+    "phone": "0887 200 104",
+    "url": "/instructors/1"
+  },
+  {
+    "name": "Мариана Пъргавелова",
+    "photo": "/static/images/mariana_pargavelova.jpg",
+    "speciality": "Фитнес, хранителни и тренировъчни програми",
+    "phone": "0893 063 892",
+    "url": "/instructors/2"
+  },
+  {
+    "name": "Надя Матай",
+    "photo": "/static/images/nadq_matai.jpg",
+    "speciality": "Фитнес",
+    "phone": "0896 740 248",
+    "url": "/instructors/3"
+  },
+  {
+    "name": "Олег Давиденко",
+    "photo": "/static/images/oleg_davidenko.jpg",
+    "speciality": "Фитнес, маратон, плуване, хранителни и тренировъчни програми",
+    "phone": "0897 843 606",
+    "url": "/instructors/4"
+  },
+  {
+    "name": "Росен Михов",
+    "photo": "/static/images/rosen_mihov.jpg",
+    "speciality": "Фитнес, бодибилдинг, хранителни и тренировъчни програми",
+    "phone": "0883 353 631",
+    "url": "/instructors/5"
+  },
+  {
+    "name": "Жулиян Желев",
+    "photo": "/static/images/juliqn_jelev.jpg",
+    "speciality": "Кикбокс",
+    "phone": "0888 962 105",
+    "url": "/instructors/6"
+  }
+]

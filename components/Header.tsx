@@ -10,7 +10,7 @@ const Header = () => {
   const [expanded, setExpanded] = useState(false);
 
   return (
-    <header className="flex items-center justify-between px-20 lg:px-20 py-14 transition-all">
+    <header className="flex items-center justify-between px-10 lg:px-20 py-10 md:py-14 transition-all">
       <Link href="/">
         <Image
           src="/static/images/logo.svg"
@@ -64,7 +64,7 @@ const Header = () => {
         />
       </div>
       <div
-        className={`md:hidden flex flex-col w-full h-full items-center py-14 px-10 gap-10 bg-primary fixed top-0 z-50 transition-all ${
+        className={`md:hidden flex flex-col w-full h-full items-center py-10 px-10 gap-10 bg-primary fixed top-0 z-50 transition-all ${
           expanded ? "left-0" : "left-[100%]"
         }`}
       >

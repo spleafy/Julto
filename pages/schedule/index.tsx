@@ -11,7 +11,7 @@ export default function Schedule() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Section className="items-center">
+      <Section className="items-center bg-white">
         <h1 className="!text-5xl md:!text-6xl text-base !font-semibold mb-10 self-center">
           Работно време
         </h1>

@@ -2,9 +2,11 @@ import Head from "next/head";
 import Link from "next/link";
 import Image from "next/image";
 import { useState, useEffect } from "react";
-import { motion } from "framer-motion";
 // Components
 import Section from "../components/layout/Section";
+// Json
+import coaches from "../public/static/coaches.json";
+import equipment from "../public/static/equipment.json";
 
 export default function Home() {
   const [index, setIndex] = useState(0);
@@ -33,12 +35,12 @@ export default function Home() {
     {
       name: "Оборудване",
       photo: "/static/images/dumbells_3.jpg",
-      link: "#equipment",
+      link: "/equipment",
     },
     {
       name: "Виртуална Разходка",
       photo: "/static/images/entrance.png",
-      link: "#virtual_walk",
+      link: "/virtual_walk",
     },
     {
       name: "Персонални Треньори",
@@ -48,49 +50,13 @@ export default function Home() {
     {
       name: "Масажи",
       photo: "/static/images/massage_2.jpg",
-      link: "#massages",
+      link: "/massages",
     },
-    { name: "Кикбокс", photo: "/static/images/kickbox.jpg", link: "#features" },
+    { name: "Кикбокс", photo: "/static/images/kickbox.jpg", link: "/kickbox" },
     {
       name: "Протеин",
       photo: "/static/images/protein_bar.jpg",
-      link: "#features",
-    },
-  ];
-
-  const equipment = [
-    "/static/images/equipment.jpg",
-    "/static/images/bars_3.jpg",
-    "/static/images/bars_4.jpg",
-    "/static/images/dumbells_3.jpg",
-    "/static/images/dumbells_2.jpg",
-    "/static/images/equipment_3.jpg",
-    "/static/images/benchpress.jpg",
-    "/static/images/equipment_2.jpg",
-  ];
-
-  const coaches = [
-    {
-      name: "Николай Калчев",
-      photo: "/static/images/nikolai_kalchev.jpg",
-    },
-    {
-      name: "Мариана Пъргавелова",
-      photo: "/static/images/mariana_pargavelova.jpg",
-    },
-    { name: "Жулиян Желев", photo: "/static/images/juliqn_jelev.jpg" },
-    {
-      name: "Надя Матай",
-      photo: "/static/images/nadq_matai.jpg",
-    },
-
-    {
-      name: "Олег Давиденко",
-      photo: "/static/images/oleg_davidenko.jpg",
-    },
-    {
-      name: "Росен Михов",
-      photo: "/static/images/rosen_mihov.jpg",
+      link: "/protein",
     },
   ];
 
@@ -160,49 +126,7 @@ export default function Home() {
             )}
           </div>
         </Section>
-        <Section className="bg-primary" id="equipment">
-          <h1 className="md:text-6xl text-5xl !font-semibold mb-10">
-            Оборудване
-          </h1>
-          <p className="!text-xl text-base mb-10 md:max-w-[80%] text-center">
-            Кардио уреди – 12 броя (пътеки, велоергометри, кростренажори, гребен
-            тренажор) Свободни тежести – уважаваме упражненията със свободни
-            тежести и затова подходихме сериозно към тази част: – специални
-            лостове до 600кг на лежанките, клека и подиума за тяга - достатъчно
-            дискове за всички уреди едновременно - дъмбели от 2,5 до 50кг – два
-            комплекта - щанги с фиксирана тежест от 10 до 50кг – два комплекта
-            Машини – подбрахме внимателно едни от най-сполучливите машини за
-            гръб, гърди, рамо, бицепс, предно бедро, задно бедро и др. Свободно
-            пространство – най-ценната част в една зала – тук можеш на
-            спокойствие да загряваш, да разтягаш, да изпълняваш упражнения със
-            свободни тежести, да играеш кик бокс.
-          </p>
-          <div className="flex flex-wrap w-full gap-10">
-            {equipment.map((src: string, index) => (
-              <div
-                className="flex relative grow w-[90%] basis-[100%] md:basis-[20%] aspect-square"
-                key={index}
-              >
-                <Image
-                  src={src}
-                  alt={src}
-                  className="object-cover rounded-2xl"
-                  fill
-                />
-              </div>
-            ))}
-          </div>
-        </Section>
-        <Section className="bg-base items-center" id="virtual_walk">
-          <h1 className="text-primary md:text-6xl text-5xl !font-semibold mb-10 text-center">
-            Виртуална разходка
-          </h1>
-          <video
-            src="/static/videos/virtual_walk.mp4"
-            className="aspect-square h-[550px]"
-            controls
-          ></video>
-        </Section>
+
         <Section id="instructors">
           <h1 className="md:!text-6xl !text-5xl text-base !font-semibold mb-10 text-center md:!text-end">
             Персонални треньори
@@ -215,7 +139,7 @@ export default function Home() {
                 key={index}
                 href="/instructors"
               >
-                <div className="flex relative h-[290px] md:h-[370px] aspect-square">
+                <div className="flex relative h-[290px] md:h-[350px] aspect-square">
                   <Image
                     src={coach.photo}
                     alt={coach.name}
@@ -223,73 +147,14 @@ export default function Home() {
                     fill
                   />
                 </div>
-                <span className="text-white text-2xl md:text-4xl font-semibold mt-10 text-center self-center px-5 max-w-[370px]">
+                <span className="text-white text-2xl md:text-4xl font-semibold mt-10 text-center self-center px-5 max-w-[350px]">
                   {coach.name}
                 </span>
               </Link>
             ))}
           </div>
         </Section>
-        <Section className="bg-base items-center" id="massages">
-          <h1 className="text-primary md:text-6xl text-5xl !font-semibold mb-10">
-            Масажи
-          </h1>
-          <p className="text-xl text-white mb-10 text-center md:max-w-[60%]">
-            Мариана Пъргавелова, масажист-терапевт. Видове: Класически, Спортен,
-            Лечебен, Антицелулитен, Релаксиращ  
-          </p>
-          <Image
-            src="/static/images/massage_2.jpg"
-            alt="Massage"
-            width={460}
-            height={460}
-            className="aspect-square rounded-2xl object-cover mb-10"
-          />
-          <h1 className="text-primary Phone !font-semibold">
-            30,00 лв. - 50,00 лв.
-          </h1>
-        </Section>
-        <Section className="bg-primary" id="features">
-          <div className="flex flex-col md:flex-row items-center justify-between gap-10 md:gap-40 mb-10">
-            <div className="flex flex-col">
-              <h1 className="md:!text-6xl !text-5xl text-base !font-semibold mb-10 text-center md:text-start">
-                Кикбокс
-              </h1>
-              <p className="!text-xl text-base text-center md:text-start">
-                Индивидуални тренировки по кикбокс за начинаещи и напреднали, от
-                6 до 60 години. Освен усвояване на техниката, в тренировките са
-                включени и много упражнения за сила и издръжливост.
-              </p>
-            </div>
-            <Image
-              src="/static/images/kickbox.jpg"
-              alt="Kickbox"
-              width={460}
-              height={460}
-              className="aspect-square rounded-2xl object-cover"
-            />
-          </div>
-          <div className="flex flex-col md:flex-row-reverse items-center justify-between gap-10 md:gap-40 mb-10">
-            <div className="flex flex-col">
-              <h1 className="md:!text-6xl !text-5xl text-base !font-semibold mb-10 text-center md:text-end">
-                Добавки
-              </h1>
-              <p className="!text-xl text-base text-center md:text-end">
-                Освен ароматно кафе и минерална вода, тук ще намерите
-                най-популярните добавки, които могат да ви помогнат да направите
-                вашата тренировка още по-ефективна. И разкошен протеинов шейк
-                след тренировка като награда за добре свършената работа.
-              </p>
-            </div>
-            <Image
-              src="/static/images/protein_bar.jpg"
-              alt="Protein"
-              width={460}
-              height={460}
-              className="aspect-square rounded-2xl object-cover"
-            />
-          </div>
-        </Section>
+
         <Section className="bg-white items-center" id="location">
           <h1 className="md:!text-6xl !text-5xl text-base !font-semibold mb-10 self-start">
             Локация

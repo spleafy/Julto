@@ -4,57 +4,10 @@ import Image from "next/image";
 import { Phone } from "phosphor-react";
 // Components
 import Section from "../../components/layout/Section";
+// Json
+import coaches from "../../public/static/coaches.json";
 
 export default function Instructors() {
-  const coaches = [
-    {
-      name: "Николай Калчев",
-      photo: "/static/images/nikolai_kalchev.jpg",
-      speciality:
-        "Фитнес, бодибилдинг, кондиционни тренировки, консултации хранене",
-      phone: "0887 200 104",
-      href: "/pages/instructors/nikolaykalchev.tsx",
-    },
-    {
-      name: "Мариана Пъргавелова",
-      photo: "/static/images/mariana_pargavelova.jpg",
-      speciality: "Фитнес, хранителни и тренировъчни програми",
-      phone: "0893 063 892",
-      href: "/pages/instructors/nikolaykalchev.tsx",
-    },
-    {
-      name: "Надя Матай",
-      photo: "/static/images/nadq_matai.jpg",
-      speciality: "Фитнес",
-      phone: "0896 740 248",
-      href: "/pages/instructors/nikolaykalchev.tsx",
-    },
-
-    {
-      name: "Олег Давиденко",
-      photo: "/static/images/oleg_davidenko.jpg",
-      speciality:
-        "Фитнес, маратон, плуване, хранителни и тренировъчни програми",
-      phone: "0897 843 606",
-      href: "/pages/instructors/nikolaykalchev.tsx",
-    },
-    {
-      name: "Росен Михов",
-      photo: "/static/images/rosen_mihov.jpg",
-      speciality: "Фитнес, бодибилдинг, хранителни и тренировъчни програми",
-      phone: "0883 353 631",
-      href: "/pages/instructors/nikolaykalchev.tsx",
-    },
-
-    {
-      name: "Жулиян Желев",
-      photo: "/static/images/juliqn_jelev.jpg",
-      speciality: "Кикбокс",
-      phone: "0888 962 105",
-      href: "/pages/instructors/nikolaykalchev.tsx",
-    },
-  ];
-
   return (
     <>
       <Head>
@@ -63,7 +16,7 @@ export default function Instructors() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Section>
+      <Section className="bg-white">
         <h1 className="!text-5xl md:!text-6xl text-base !font-semibold mb-10 self-center">
           Инструктори
         </h1>
@@ -75,14 +28,14 @@ export default function Instructors() {
               photo: string;
               speciality: string;
               phone: string;
-              href: string;
+              url: string;
             },
             index
           ) => (
             <Link
               key={index}
               className="bg-base rounded-2xl flex flex-col md:flex-row w-full gap-8 md:gap-16 mb-12 "
-              href={coach.href}
+              href={coach.url}
             >
               <Image
                 src={coach.photo}
@@ -92,7 +45,7 @@ export default function Instructors() {
                 className="aspect-square object-cover rounded-2xl w-full md:w-80"
               />
               <div className="flex flex-col gap-10 pb-10 md:pb-14 px-5 pt-0 md:py-14 md:justify-start md:items-start justify-center items-center">
-                <h1 className="text-white font-bold text-2xl md:text-4xl text-center">
+                <h1 className="text-primary font-bold text-2xl md:text-4xl text-center">
                   {coach.name}
                 </h1>
                 <p className="text-white opacity-70 text-xl md:text-2xl max-w-[80%] text-center md:text-start">

@@ -11,7 +11,7 @@ export default function Pricing() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Section>
+      <Section className="bg-white">
         <h1 className="!text-5xl md:!text-6xl text-base !font-semibold mb-20 self-center">
           Цени
         </h1>
